@@ -1,0 +1,589 @@
+*{
+  margin:0;
+  padding:0;
+  }
+  
+/* 蓝条*/
+  .rectangle {
+    width: 100%;
+    height: 20px; 
+    background-color: #104a18; 
+  }
+
+/* 标题*/
+/* 标题 */
+header {
+  grid-column: span 2;
+  text-align: start;
+  border-bottom: 3px solid #1a2665;
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr 1fr; /* Three columns in the header */
+  align-items: flex-end; /* Align items to the bottom of the container */
+  padding-bottom: 10px;
+
+  h1 {
+    grid-column: span 2; /* Start at column 1 and end at column 2 */
+    font-size: 2em;
+    margin-bottom: 0.25rem;
+    margin-left: 5%;
+    font-family: 'Hanken Grotesk', san-serif;
+    display: inline-block; /* Allow vertical-align to work */
+    vertical-align: baseline; /* Align with the baseline of the h1 text */
+  }
+
+  .info {
+    grid-column: 3/ 4; /* Start at column 3 and end at column 4 */
+    font-size: 1.5em; /* Adjust size as needed */
+    text-align: bottom; /* Align the h2 text to the right */
+    margin-top: 500px; /* Move the h2 element down by 10 pixels */
+    display: inline-block; /* Allow vertical-align to work */
+    vertical-align: baseline; /* Align with the baseline of the h1 text */
+  }
+  }
+
+  .contact {
+    grid-column: 3/ 4; /* Start at column 3 and end at column 4 */
+    font-size: 1.5em; /* Adjust size as needed */
+    text-align: left; /* Align the h2 text to the right */
+    margin-top: 100px; /* Move the h2 element down by 10 pixels */
+  }
+
+
+
+
+/*页面布局*/
+.grid-container{
+    display:grid;
+    max-width: 1300px;
+    grid-template-columns: 1fr 5fr ;   
+    column-gap: 30px ; 
+}
+
+
+/* 导航栏*/
+nav{
+  grid-column: span 1;
+  padding:30px;
+  border-right:3px solid black; 
+
+}
+
+nav a{
+  display: block;
+  grid-column: span 1;
+  font-family:'Hanken Grotesk', san-serif;
+  font-size: 2em;
+  font-weight: 400;
+  margin-left: 5%;
+  line-height: 2em;
+  margin-top: 20px;
+  text-decoration: none;
+  color: black;
+  transition: font-size 0.1s, border 0.1s; 
+}
+
+nav a:hover {
+  font-size: 2.2em; 
+  color:#104a18;
+  border-bottom: 4px solid #104a18; 
+}
+
+/*艺人*/
+.artists{
+    display: grid; 
+    max-width: 100%; 
+    margin: 3 auto;
+    grid-template-columns:repeat(4, 200px);
+    grid-template-rows:repeat(3, 200px);
+    grid-gap: 8em 2em;
+    padding-top: 20px;
+   
+
+}
+
+  .artists> div {
+    margin-top: 50px;
+    height: 300px;
+    width:200px;
+    align-items: center;
+    margin-left: 80px;
+     
+  }
+  
+  .artists> div img {
+    width: 100%; 
+    height: 100%; 
+    display: block; 
+  }
+
+/* bp图片翻转 */
+.bpbox {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+}
+
+.bpbox img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+
+}
+
+.bpbox img:last-child {
+  transform: scale(0);
+}
+
+.bpbox:hover img:first-child {
+  transform: scale(0);
+
+}
+
+.bpbox:hover img:last-child {
+  transform: scale(1);
+}
+
+/* nct图片翻转 */
+.nctbox {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+}
+
+.nctbox img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.nctbox img:last-child {
+  transform: scale(0);
+}
+
+.nctbox:hover img:first-child {
+  transform: scale(0);
+}
+
+.nctbox:hover img:last-child {
+  transform: scale(1);
+}
+
+/* skz图片翻转 */
+.skzbox {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+}
+
+.skzbox img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.skzbox img:last-child {
+  transform: scale(0);
+}
+
+.skzbox:hover img:first-child {
+  transform: scale(0);
+}
+
+.skzbox:hover img:last-child {
+  transform: scale(1);
+}
+
+/* mamamoo图片翻转 */
+.mabox {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+}
+
+.mabox img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.mabox img:last-child {
+  transform: scale(0);
+}
+
+.mabox:hover img:first-child {
+  transform: scale(0);
+}
+
+.mabox:hover img:last-child {
+  transform: scale(1);
+}
+
+
+.mabox:hover img:last-child {
+  transform: scale(1);
+}
+
+/* rv图片翻转 */
+.rvbox {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+}
+
+.rvbox img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.rvbox img:last-child {
+  transform: scale(0);
+}
+
+.rvbox:hover img:first-child {
+  transform: scale(0);
+}
+
+.rvbox:hover img:last-child {
+  transform: scale(1);
+}
+
+
+.rvbox:hover img:last-child {
+  transform: scale(1);
+}
+
+/* twice图片翻转 */
+.tubox {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+}
+
+.tubox img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tubox img:last-child {
+  transform: scale(0);
+}
+
+.tubox:hover img:first-child {
+  transform: scale(0);
+}
+
+.tubox:hover img:last-child {
+  transform: scale(1);
+}
+
+.tubox:hover img:last-child {
+  transform: scale(1);
+}
+
+/* wannaone图片翻转 */
+.wanbox {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+}
+
+.wanbox img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.wanbox img:last-child {
+  transform: scale(0);
+}
+
+.wanbox:hover img:first-child {
+  transform: scale(0);
+}
+
+.wanbox:hover img:last-child {
+  transform: scale(1);
+}
+
+.wanbox:hover img:last-child {
+  transform: scale(1);
+}
+
+
+/* svt图片翻转 */
+.svtbox {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+}
+
+.svtbox img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.svtbox img:last-child {
+  transform: scale(0);
+}
+
+.svtbox:hover img:first-child {
+  transform: scale(0);
+}
+
+.svtbox:hover img:last-child {
+  transform: scale(1);
+}
+
+.svtbox:hover img:last-child {
+  transform: scale(1);
+}
+
+/* got7图片翻转 */
+.got7box {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+}
+
+.got7box img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.got7box img:last-child {
+  transform: scale(0);
+}
+
+.got7box:hover img:first-child {
+  transform: scale(0);
+}
+
+.got7box:hover img:last-child {
+  transform: scale(1);
+}
+
+.got7box:hover img:last-child {
+  transform: scale(1);
+}
+
+/* gfriend图片翻转 */
+.gfbox {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+}
+
+.gfbox img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gfbox img:last-child {
+  transform: scale(0);
+}
+
+.gfbox:hover img:first-child {
+  transform: scale(0);
+}
+
+.gfbox:hover img:last-child {
+  transform: scale(1);
+}
+
+.gfbox:hover img:last-child {
+  transform: scale(1);
+}
+
+/* nct127图片翻转 */
+.gebox {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+}
+
+.gebox img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gebox img:last-child {
+  transform: scale(0);
+}
+
+.gebox:hover img:first-child {
+  transform: scale(0);
+}
+
+.gebox:hover img:last-child {
+  transform: scale(1);
+}
+
+.gebox:hover img:last-child {
+  transform: scale(1);
+}
+
+/* winner图片翻转 */
+.winbox {
+  position: relative;
+  overflow: hidden;
+  width: 200px;
+  height: 300px;
+}
+
+.winbox img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.winbox img:last-child {
+  transform: scale(0);
+}
+
+.winbox:hover img:first-child {
+  transform: scale(0);
+}
+
+.winbox:hover img:last-child {
+  transform: scale(1);
+}
+
+.winbox:hover img:last-child {
+  transform: scale(1);
+}
+
+   /* Artists Section Responsive */
+  
+   @media screen and (max-width: 1200px) {
+    .artists {
+      margin-left: 60px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 7em 1em;
+    }
+  
+    .artists > div {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  /* For screens up to 980px */
+  @media screen and (max-width: 980px) {
+    .artists {
+      margin-left: 60px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 7em 1em;
+    }
+  
+    .artists > div {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  
+    /*RESPONSIVE*/
+    @media screen and (max-width: 1200px){
+      nav{
+          grid-column: span 3;
+          border-right: 0;
+          
+      }
+  
+      nav a{
+          display: inline-block;
+          margin-right: 10px;
+      }
+  
+      artists{
+          grid-column: span 2;
+      }
+    }
+  
+    @media screen and (max-width: 980px){
+      nav, artists{
+          grid-column: span 2;
+          border-right: 0;
+          
+      }
+  
+      nav a{
+          display: inline-block;
+          margin-right: 10px;
+      }
+  
+      artists{
+          grid-column: span 2;
+      }
+    }
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

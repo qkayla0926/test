@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   
+    <title>kpop time capsule</title>
+</head>
+
+<body>
+    <div class="rectangle" style="width: 100%; height: 20px; background-color: #1a2665;"></div>
+
+
+
+    <div class="shell" id="shell">
+        <div class="header" style="border-bottom: 3px solid #1a2665;">
+            <h2 class="title">KPOP </br>TIME</br>CAPSULE</h2>
+        </div>
+        
+        <div class="timeline">
+
+
+            <div class="item" data-text="1997-2005">
+                <div class="content">
+                    <a href="../first-gen/main.html">
+                        <img class="img" src="./img/01.jpg" alt="Description of the image" />
+                    </a>
+                </div>
+            </div>
+            
+            <div class="item" data-text="2006-2009">
+                <div class="content">
+                    <a href="../second-gen/main.html">
+                    <img class="img" src="./img/02.jpg" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="item" data-text="2010-2013">
+                <div class="content">
+                    <a href = "../third-gen/main.html">
+                    <img class="img" src="./img/03.jpg" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="item" data-text="2014-2017">
+                <div class="content">
+                    <a href = "../forth-gen/main.html">
+                    <img class="img" src="./img/04.jpg" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="item" data-text="2018-2021">
+                <div class="content">
+                    <a href = "../fifth-gen/main.html">
+                    <img class="img" src="./img/05.jpg" />
+                    </a>
+                </div>
+            </div>
+
+            <div class="item" data-text="2022-">
+                <div class="content">
+                    <a href = "../sixth-gen/main.html">
+                    <img class="img" src="./img/06.jpg" />
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+(function ($) {
+  $.fn.timeline = function () {
+    var selectors = {
+      id: $(this),
+      item: $(this).find(".item"),
+      activeClass: "item--active"
+    };
+
+    selectors.item.eq(0).addClass(selectors.activeClass);
+
+    $(window).scroll(function () {
+      var max, min;
+      var pos = $(this).scrollTop();
+      
+      selectors.item.each(function (i) {
+        min = $(this).offset().top;
+        max = $(this).height() + $(this).offset().top;
+        
+        if (pos <= max - 10 && pos >= min) {
+          selectors.item.removeClass(selectors.activeClass);
+          $(this).addClass(selectors.activeClass);
+        }
+      });
+    });
+  };
+})(jQuery);
+      
+        $("#shell").timeline();
+    </script>
+</body>
+
+</html>
